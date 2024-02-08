@@ -11,9 +11,12 @@ const Feeds = () => {
         //console.log(rawData);
         //const Info = await rawData.json();
         //dispatch({type: ACTION.FETCH, payload: Info})
-        fetch(uri, {mode: 'no-cors'})
-        .then((res)=>res.json())
-        .then(data=>dispatch({type: ACTION.FETCH, payload: data}))
+        console.log('getting info');
+        const rawdata = await fetch(uri)
+        console.log(rawdata);
+        const data = await rawdata.json()
+        console.log(data);
+        dispatch({type: ACTION.FETCH, payload: data})
     }
     const reducer = (state, action)=>{
         switch(action.type){
@@ -26,7 +29,7 @@ const Feeds = () => {
     }
     const [state, dispatch] = useReducer(reducer, []);
     useEffect(()=>{
-        getDatas('/api/auth/datas')
+        getDatas('https://backendapi-production-4881.up.railway.app/api/auth/datas')
         
     }, [])
     return (
