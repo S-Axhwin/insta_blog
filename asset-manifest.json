@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/insta_blog/static/css/main.f855e6bc.css",
-    "main.js": "/insta_blog/static/js/main.5240ad8b.js",
+    "main.js": "/insta_blog/static/js/main.d2e79ad3.js",
     "static/js/592.599f76a2.chunk.js": "/insta_blog/static/js/592.599f76a2.chunk.js",
     "index.html": "/insta_blog/index.html",
     "main.f855e6bc.css.map": "/insta_blog/static/css/main.f855e6bc.css.map",
-    "main.5240ad8b.js.map": "/insta_blog/static/js/main.5240ad8b.js.map",
+    "main.d2e79ad3.js.map": "/insta_blog/static/js/main.d2e79ad3.js.map",
     "592.599f76a2.chunk.js.map": "/insta_blog/static/js/592.599f76a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.5240ad8b.js"
+    "static/js/main.d2e79ad3.js"
   ]
 }
