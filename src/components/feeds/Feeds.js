@@ -15,7 +15,6 @@ const Feeds = () => {
         const rawdata = await fetch(uri)
         console.log(rawdata);
         const data = await rawdata.json()
-        console.log(data);
         dispatch({type: ACTION.FETCH, payload: data})
     }
     const reducer = (state, action)=>{
