@@ -26,7 +26,6 @@ const Register = () => {
   }
   return (
     <div style={{display: 'flex', justifyContent: "center", padding: '3rem'}}>
-
     <form onSubmit={handleSubmit} style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column', gap: '2rem'}}>
         <TextField
          label="username"

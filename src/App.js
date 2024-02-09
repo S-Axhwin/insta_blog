@@ -5,11 +5,7 @@ import NewPost from './components/newpost/NewPost';
 import Header from './components/Common/header/Header';
 import Register from './components/register/Register';
 
-
-
-
 function App() {
-
   return (
     <>
     <Header/>
