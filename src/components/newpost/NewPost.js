@@ -22,7 +22,7 @@ const NewPost = () => {
 //non  
   const handleSub = async (e)=>{
     e.preventDefault()
-    const post = await fetch("/api/auth/post", 
+    const post = await fetch("https://backendapi-production-4881.up.railway.app/api/auth/post", 
         {
             method: 'POST',
             body: JSON.stringify({username, password, blog}),
