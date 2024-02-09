@@ -6,12 +6,7 @@ export const ACTION = {
 }
 
 const Feeds = () => {
-    const getDatas = async (uri)=>{
-        //const rawData = await fetch(uri, {mode:  'no-cors' })
-        //console.log(rawData);
-        //const Info = await rawData.json();
-        //dispatch({type: ACTION.FETCH, payload: Info})
-        console.log('getting info');
+    const getDatas = async ()=>{
         const rawdata = await fetch("https://backendapi-production-4881.up.railway.app/api/auth/datas")
         const data = await rawdata.json()
         dispatch({type: ACTION.FETCH, payload: data})
@@ -27,19 +22,19 @@ const Feeds = () => {
     }
     const [state, dispatch] = useReducer(reducer, []);
     useEffect(()=>{
-        getDatas('https://backendapi.railway.internal/api/auth/datas')
+        getDatas()
         
     }, [])
     return (
       <div style={{display: 'flex', justifyContent: "center"}}>
       <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column'}}>
-      {state?.map((data, ind)=>{
+      {state?.reverse().map((data, ind)=>{
           return<div key={ind}>
           <div >
             <h1>{data.username}</h1>
           </div>
           <div>
-            {data.feed.map((feeds, index)=>(<li key={index}>{feeds}</li>))}
+            {data.feed}
           </div>
           </div>
         })
