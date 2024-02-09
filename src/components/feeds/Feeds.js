@@ -1,5 +1,7 @@
 
 import { useEffect, useReducer } from "react"
+import { Skeleton } from "@mui/material"
+import Load from "../Common/load/Load"
 
 export const ACTION = {
     FETCH: 'fetch',
@@ -20,15 +22,14 @@ const Feeds = () => {
         }
         
     }
-    const [state, dispatch] = useReducer(reducer, []);
+    const [state, dispatch] = useReducer(reducer, undefined);
     useEffect(()=>{
         getDatas()
-        
     }, [])
     return (
-      <div style={{display: 'flex', justifyContent: "center"}}>
+      <div style={{display: 'flex', justifyContent: "center", paddingTop: '5rem'}}>
       <div style={{display: 'flex', justifyContent: 'space-around', flexDirection: 'column'}}>
-      {state?.reverse().map((data, ind)=>{
+      {state?state.reverse().map((data, ind)=>{
           return<div key={ind}>
           <div >
             <h1>{data.username}</h1>
@@ -37,7 +38,7 @@ const Feeds = () => {
             {data.feed}
           </div>
           </div>
-        })
+        }): <Load/>
         
     }
       </div>
