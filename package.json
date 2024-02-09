@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "proxy": "http://localhost:5001/",
   "homepage": "https://s-axhwin.github.io/insta_blog/",
   "private": true,
   "dependencies": {
